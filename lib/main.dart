@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login_page.dart';
-import 'register_page.dart'; // Importujemy stronę rejestracji
+import 'register_page.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const LoginPage(),
-        '/register': (context) => const RegisterPage(), // Dodajemy nową stronę rejestracji
+        '/register': (context) => const RegisterPage(),
       },
     );
   }
