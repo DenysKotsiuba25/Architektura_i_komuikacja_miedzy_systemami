@@ -26,7 +26,7 @@ class _RegisterPageState extends State<RegisterPage> {
       url,
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': 'reqres-free-v1', // Klucz API
+        'x-api-key': 'reqres-free-v1', 
       },
       body: jsonEncode({'email': email, 'password': password}),
     );
@@ -38,7 +38,6 @@ class _RegisterPageState extends State<RegisterPage> {
       final data = json.decode(response.body);
       final token = data['token'];
       if (token != null) {
-        // Rejestracja udana, przejście do strony logowania
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -82,7 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
               ElevatedButton(
                 onPressed: () {
                   if (_formKey.currentState!.validate()) {
-                    _register();  // Wywołanie metody rejestracji
+                    _register();  
                   }
                 },
                 child: const Text('Zarejestruj się'),
