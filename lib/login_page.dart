@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'offline_scanner_page.dart';
-import 'register_page.dart';  // Importujemy stronę rejestracji
+import 'register_page.dart';  
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
       url,
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': 'reqres-free-v1', // Dodajemy klucz API
+        'x-api-key': 'reqres-free-v1', 
       },
       body: jsonEncode({'email': email, 'password': password}),
     );
@@ -96,7 +96,6 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
               const SizedBox(height: 20),
-              // Dodajemy przycisk przejścia do strony rejestracji
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
